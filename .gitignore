@@ -1,0 +1,48 @@
+# Unity generated folders
+Library/
+ProjectSettings/
+UserSettings/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Crash reports
+*.stacktrace
+
+# Temporary files
+Temp/
+Build/
+Builds/
+obj/
+
+# Visual Studio/MonoDevelop generated files
+.vscode/
+*.csproj
+*.pidb
+*.suo
+*.user
+*.userprefs
+*.unityproj
+*.sln
+*.dll
+
+# Unity auto-generated files
+*.apk
+*.aab
+*.unitypackage
+
+# Exclude build artifacts
+*.exe
+*.app
+*.ipa
+*.msi
+*.pdb
+
+# Exclude folders created by version control systems
+.idea/
+.vscode/
+*.iml
