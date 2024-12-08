@@ -63,8 +63,8 @@ public class Turtle : MonoBehaviour
     ///
     void Move()
     {
-        bool left = Input.GetKey(KeyCode.LeftArrow);
-        bool right = Input.GetKey(KeyCode.RightArrow);
+        bool left = Input.GetKey(KeyCode.A);
+        bool right = Input.GetKey(KeyCode.D);
 
         int horizontal = 0;
 

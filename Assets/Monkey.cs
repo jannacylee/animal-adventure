@@ -18,7 +18,7 @@ public class Monkey : MonoBehaviour
     /// <summary>
     /// Moving velocity of the monkey
     /// </summary>
-    private float RunVelocity = 7;
+    private float RunVelocity = 5;
 
     /// <summary>
     /// Interval to time jumps
