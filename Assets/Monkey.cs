@@ -21,11 +21,6 @@ public class Monkey : MonoBehaviour
     private float RunVelocity = 5;
 
     /// <summary>
-    /// Interval to time jumps
-    /// </summary>
-    private float JumpTimer = 0;
-
-    /// <summary>
     /// AudioClip for jumping
     /// </summary>
     public AudioClip JumpAudio;
@@ -44,6 +39,11 @@ public class Monkey : MonoBehaviour
     /// Boolean telling us if the monkey is climbing or not
     /// </summary>
     public bool Climbing;
+
+    /// <summary>
+    /// Boolean to see if the player is on ground
+    /// </summary>
+    private bool isGrounded = false;
 
 
     // Start is called before the first frame update
@@ -81,6 +81,9 @@ public class Monkey : MonoBehaviour
         int horizontal = 0;
         int vertical = 0;
 
+        Vector2 rayOrigin = new Vector2(transform.position.x, transform.position.y - .5f);
+        isGrounded = Physics2D.Raycast(rayOrigin, Vector2.down, .2f);
+
         if (right)
         {
             horizontal = 1;
@@ -93,14 +96,15 @@ public class Monkey : MonoBehaviour
             transform.localScale = new Vector3(-0.3f,  0.3f,  0.3f); // facing left
         }
 
-        if (jump && JumpTimer < Time.time)
+        if (jump && isGrounded)
         {
             vertical = 25;
-            JumpTimer = Time.time + 1;
         }
 
         Vector2 movement = new Vector2(horizontal * RunVelocity, vertical * RunVelocity);
         RigidBody.AddForce(movement);
+
+        isGrounded = false;
     }
 
     ///
