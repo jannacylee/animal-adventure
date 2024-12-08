@@ -8,7 +8,7 @@ public class Monkey : MonoBehaviour
     /// <summary>
     /// RigidBody of the monkey
     /// </summary>
-    public Rigidbody2D RigidBody;
+    public Rigidbody2D rb;
 
     /// <summary>
     /// Starting posn of the player, to respawn if the monkey dies
@@ -49,7 +49,7 @@ public class Monkey : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        RigidBody = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         StartingPosition = transform.position;
         AudioSource = GetComponent<AudioSource>();
     }
@@ -57,7 +57,12 @@ public class Monkey : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
+        ClimbCheck();
+        if (Climbing)
+        {
+            Climb();
+        }
+        else Move();
     }
 
     ///
@@ -72,8 +77,37 @@ public class Monkey : MonoBehaviour
     ///
     /// Manoeuvre the monkey, either jumping or running
     ///
+    void ClimbCheck()
+    {
+        Collider2D[] colliders = Physics2D.OverlapBoxAll(transform.position, new Vector2(.2f, 1), 0);
+
+        bool vine = false;
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.CompareTag("Vine"))
+            {
+                vine = true;
+            }
+        }
+        if(vine == true && Input.GetKey(KeyCode.G))
+        {
+            Climbing = true;
+            return;
+        }
+        Climbing = false;
+    }
+
+    void Climb()
+    {
+        rb.gravityScale = 0;
+        rb.velocity = Vector3.zero;
+        int down = Input.GetKey(KeyCode.S) == true ? 1 : 0;
+        int up = Input.GetKey(KeyCode.W) == true ? 1 : 0;
+        transform.Translate((Vector3.down * (int) down  + Vector3.up *up) * Time.deltaTime);
+    }
     void Move()
     {
+        rb.gravityScale = 1;
         bool right = Input.GetKey(KeyCode.D);
         bool left = Input.GetKey(KeyCode.A);
         bool jump = Input.GetKey(KeyCode.W);
@@ -100,7 +134,7 @@ public class Monkey : MonoBehaviour
         }
 
         Vector2 movement = new Vector2(horizontal * RunVelocity, vertical * RunVelocity);
-        RigidBody.AddForce(movement);
+        rb.AddForce(movement);
     }
 
     ///
