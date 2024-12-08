@@ -67,6 +67,7 @@ public class Bunny : MonoBehaviour
     ///
     /// Manoeuvre the bunny, either jumping or running
     ///
+
     void Move()
     {
         bool right = Input.GetKey(KeyCode.D);
@@ -79,11 +80,13 @@ public class Bunny : MonoBehaviour
         if (right)
         {
             horizontal = 1;
+            transform.localScale = new Vector3(0.3f, 0.3f,  0.3f); // facing right
         }
 
         if (left)
         {
             horizontal = -1;
+            transform.localScale = new Vector3(-0.3f,  0.3f,  0.3f); // facing left
         }
 
         if (jump && JumpTimer < Time.time)

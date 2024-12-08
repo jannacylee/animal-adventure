@@ -84,11 +84,13 @@ public class Monkey : MonoBehaviour
         if (right)
         {
             horizontal = 1;
+            transform.localScale = new Vector3(0.3f, 0.3f,  0.3f); // facing right
         }
 
         if (left)
         {
             horizontal = -1;
+            transform.localScale = new Vector3(-0.3f,  0.3f,  0.3f); // facing left
         }
 
         if (jump && JumpTimer < Time.time)
