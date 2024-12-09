@@ -21,11 +21,6 @@ public class Bunny : MonoBehaviour
     private float RunVelocity = 10;
 
     /// <summary>
-    /// Interval to time jumps
-    /// </summary>
-    private float JumpTimer = 0;
-
-    /// <summary>
     /// AudioClip for jumping
     /// </summary>
 
@@ -38,6 +33,11 @@ public class Bunny : MonoBehaviour
     /// AudioSource for the Bunny
     /// </summary>
     public AudioSource AudioSource;
+
+    /// <summary>
+    /// Boolean to see if the player is on ground
+    /// </summary>
+    private bool isGrounded = false;
 
 
     // Start is called before the first frame update
@@ -71,32 +71,43 @@ public class Bunny : MonoBehaviour
     {
         bool right = Input.GetKey(KeyCode.D);
         bool left = Input.GetKey(KeyCode.A);
-        bool jump = Input.GetKey(KeyCode.W);
+        bool jump = Input.GetKeyDown(KeyCode.W);
+        bool superjump = Input.GetKeyDown(KeyCode.G);
 
         int horizontal = 0;
         int vertical = 0;
 
+        Vector2 rayOrigin = new Vector2(transform.position.x, transform.position.y - .5f);
+        isGrounded = Physics2D.Raycast(rayOrigin, Vector2.down, .2f);
+
         if (right)
         {
             horizontal = 1;
-            transform.localScale = new Vector3(0.3f, 0.3f,  0.3f); // facing right
+            transform.localScale = new Vector3(0.15f, 0.15f,  0.15f); // facing right
         }
 
         if (left)
         {
             horizontal = -1;
-            transform.localScale = new Vector3(-0.3f,  0.3f,  0.3f); // facing left
+            transform.localScale = new Vector3(-0.15f,  0.15f,  0.15f); // facing left
         }
 
-        if (jump && JumpTimer < Time.time)
+        if (jump && isGrounded)
         {
-            vertical = 50;
-            JumpTimer = Time.time + 2;
+            vertical = 10;
+        }
+
+        if(superjump && isGrounded)
+        {
+            vertical = 40;
             AudioSource.Play();
+
         }
 
         Vector2 movement = new Vector2(horizontal * RunVelocity, vertical * RunVelocity);
         RigidBody.AddForce(movement);
+
+        isGrounded = false;
     }
 
     ///
@@ -106,5 +117,4 @@ public class Bunny : MonoBehaviour
     {
         ResetPosition();
     }
-
 }
