@@ -6,11 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/TempScene.unity
     guid: 710658878f6872149b0494547a67b538
+  - enabled: 1
+    path: Assets/Scenes/bunnyTest.unity
+    guid: a7da4d128b50049838542909b1a545d9
+  - enabled: 1
+    path: Assets/Scenes/turtleTest.unity
+    guid: a1b752644955141adac245077f7f67f3
+  - enabled: 1
+    path: Assets/Scenes/monkeyTest.unity
+    guid: 7806fffc40d2d4e0781e57df75f83b6d
   - enabled: 1
     path: Assets/Scenes/End Game.unity
     guid: 51727e1aa11cde140846067fe7ba7b33
