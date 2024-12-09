@@ -17,7 +17,7 @@ public class Turtle : MonoBehaviour
     /// <summary>
     /// Moving velocity of the turtle
     /// </summary>
-    private float WalkVelocity = 2;
+    private float WalkVelocity = 3.5f;
 
     /// <summary>
     /// AudioClip for dying
@@ -33,6 +33,8 @@ public class Turtle : MonoBehaviour
     /// Boolean telling us if the turtle is in water or not
     /// </summary>
     public bool Swimming;
+
+    private float JumpTimer = 0;
 
 
     // Start is called before the first frame update
@@ -65,8 +67,10 @@ public class Turtle : MonoBehaviour
     {
         bool left = Input.GetKey(KeyCode.A);
         bool right = Input.GetKey(KeyCode.D);
+        bool jump = Input.GetKey(KeyCode.W);
+        int vertical = 0;
 
-        int horizontal = 0;
+        float horizontal = 0;
 
         if (right)
         {
@@ -82,11 +86,23 @@ public class Turtle : MonoBehaviour
 
         if (Swimming)
         {
-            horizontal = horizontal * 4;
-        }
+            RigidBody.gravityScale = -0.3f;
 
-        Vector2 movement = new Vector2(horizontal * WalkVelocity, 1);
+            if (jump && JumpTimer < Time.time)
+            {
+                vertical = 175;
+                JumpTimer = Time.time + 1;
+            }
+            horizontal = horizontal * 1.5f;
+        }
+        else RigidBody.gravityScale = 1f;
+
+        Vector2 movement = new Vector2(horizontal * WalkVelocity, 1+vertical);
         RigidBody.AddForce(movement);
+    }
+    public void Swim(bool status)
+    {
+        Swimming = status;
     }
 
     ///

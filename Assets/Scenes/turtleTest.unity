@@ -288,11 +288,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 858912406086609790, guid: 60a8d5a3b27b5a94d98c63a9b9337db2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.2214227
+      value: -4.62
       objectReference: {fileID: 0}
     - target: {fileID: 858912406086609790, guid: 60a8d5a3b27b5a94d98c63a9b9337db2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.2661126
+      value: 2.88
       objectReference: {fileID: 0}
     - target: {fileID: 858912406086609790, guid: 60a8d5a3b27b5a94d98c63a9b9337db2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -331,12 +331,16 @@ PrefabInstance:
       value: turtleTest
       objectReference: {fileID: 0}
     - target: {fileID: 3634796758034707374, guid: 60a8d5a3b27b5a94d98c63a9b9337db2, type: 3}
+      propertyPath: m_Mass
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3634796758034707374, guid: 60a8d5a3b27b5a94d98c63a9b9337db2, type: 3}
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3634796758034707374, guid: 60a8d5a3b27b5a94d98c63a9b9337db2, type: 3}
       propertyPath: m_GravityScale
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -351,6 +355,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1357145836998309013, guid: 34bfc471b495b9e42be4ced7b88b2df6, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1424371392951223456, guid: 34bfc471b495b9e42be4ced7b88b2df6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.68
@@ -401,7 +409,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4051770033832033421, guid: 34bfc471b495b9e42be4ced7b88b2df6, type: 3}
       propertyPath: m_Size.y
-      value: 24.452618
+      value: 22.562038
       objectReference: {fileID: 0}
     - target: {fileID: 4051770033832033421, guid: 34bfc471b495b9e42be4ced7b88b2df6, type: 3}
       propertyPath: m_Offset.x
@@ -409,7 +417,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4051770033832033421, guid: 34bfc471b495b9e42be4ced7b88b2df6, type: 3}
       propertyPath: m_Offset.y
-      value: 0.2322998
+      value: -0.71298933
       objectReference: {fileID: 0}
     - target: {fileID: 4051770033832033421, guid: 34bfc471b495b9e42be4ced7b88b2df6, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
