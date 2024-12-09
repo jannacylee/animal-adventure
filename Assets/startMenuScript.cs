@@ -41,7 +41,7 @@ public class StartManager : MonoBehaviour
     {
         StartPanel.SetActive(false);
         Time.timeScale = 1f;
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
     }
 }
 

@@ -28,7 +28,6 @@ public class Bunny : MonoBehaviour
     /// <summary>
     /// AudioClip for jumping
     /// </summary>
-    public AudioClip JumpAudio;
 
     /// <summary>
     /// AudioClip for dying
@@ -50,7 +49,7 @@ public class Bunny : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Move();
     }
@@ -93,6 +92,7 @@ public class Bunny : MonoBehaviour
         {
             vertical = 50;
             JumpTimer = Time.time + 2;
+            AudioSource.Play();
         }
 
         Vector2 movement = new Vector2(horizontal * RunVelocity, vertical * RunVelocity);

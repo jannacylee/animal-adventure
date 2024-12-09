@@ -334,6 +334,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: turtleTest
       objectReference: {fileID: 0}
+    - target: {fileID: 1214316419355619878, guid: 60a8d5a3b27b5a94d98c63a9b9337db2, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 3634796758034707374, guid: 60a8d5a3b27b5a94d98c63a9b9337db2, type: 3}
       propertyPath: m_Mass
       value: 0.8
@@ -359,6 +363,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1652685421449067481, guid: 34bfc471b495b9e42be4ced7b88b2df6, type: 3}
+      propertyPath: AudioSource
+      value: 
+      objectReference: {fileID: 622874085}
+    - target: {fileID: -1652685421449067481, guid: 34bfc471b495b9e42be4ced7b88b2df6, type: 3}
+      propertyPath: audiosource
+      value: 
+      objectReference: {fileID: 622874085}
     - target: {fileID: -1357145836998309013, guid: 34bfc471b495b9e42be4ced7b88b2df6, type: 3}
       propertyPath: m_Mass
       value: 1
