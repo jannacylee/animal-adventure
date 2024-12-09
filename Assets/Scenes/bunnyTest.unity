@@ -474,6 +474,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunnyTest
       objectReference: {fileID: 0}
+    - target: {fileID: 3394279928269455151, guid: e311e349369134652a3a04070f926369, type: 3}
+      propertyPath: JumpAudio
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3394279928269455151, guid: e311e349369134652a3a04070f926369, type: 3}
+      propertyPath: AudioSource
+      value: 
+      objectReference: {fileID: 1467562998}
     - target: {fileID: 5949483208203927945, guid: e311e349369134652a3a04070f926369, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.84
@@ -925,6 +933,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5949483208203927945, guid: e311e349369134652a3a04070f926369, type: 3}
   m_PrefabInstance: {fileID: 657317142}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &1467562998 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: -1307575036232036265, guid: e311e349369134652a3a04070f926369, type: 3}
+  m_PrefabInstance: {fileID: 657317142}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1656580511
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1122,3 +1135,5 @@ SceneRoots:
   - {fileID: 204637533}
   - {fileID: 954667705}
   - {fileID: 305004912}
+  - {fileID: 1200978473}
+  - {fileID: 1770883390}

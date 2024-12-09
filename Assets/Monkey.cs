@@ -24,11 +24,7 @@ public class Monkey : MonoBehaviour
     /// Interval to time jumps
     /// </summary>
     private float JumpTimer = 0;
-
-    /// <summary>
-    /// AudioClip for jumping
-    /// </summary>
-    public AudioClip JumpAudio;
+    private float climbCd = 0;
 
     /// <summary>
     /// AudioClip for dying
@@ -98,6 +94,11 @@ public class Monkey : MonoBehaviour
         }
         if(vine == true && Input.GetKey(KeyCode.G))
         {
+            if(climbCd < Time.time)
+            {
+                climbCd = Time.time + 1;
+                AudioSource.Play();
+            }
             Climbing = true;
             return;
         }
