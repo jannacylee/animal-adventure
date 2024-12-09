@@ -35,7 +35,19 @@ public class Water : MonoBehaviour
         Turtle turt = collision.GetComponent<Turtle>();
         if (turt != null)
         {
-            AudioSource.PlayOneShot(SPLASH);
+            if (!turt.Swimming)
+            {
+                turt.Swim(true);
+                AudioSource.PlayOneShot(SPLASH);
+            }
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        Turtle turt = collision.GetComponent<Turtle>();
+        if (turt != null)
+        {
+            turt.Swim(false);
         }
     }
 }

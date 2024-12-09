@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7521339364826186405}
   m_Layer: 0
   m_Name: monkeyTest
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 8b10e0ab8bfaa4476a6623d9e970e4ad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02bc7243346d7a443ba6c2a18065f860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RigidBody: {fileID: 0}
+  rb: {fileID: 0}
   StartingPosition: {x: 0, y: 0, z: 0}
   JumpAudio: {fileID: 0}
   DeathAudio: {fileID: 0}

@@ -8,7 +8,7 @@ public class Monkey : MonoBehaviour
     /// <summary>
     /// RigidBody of the monkey
     /// </summary>
-    public Rigidbody2D RigidBody;
+    public Rigidbody2D rb;
 
     /// <summary>
     /// Starting posn of the player, to respawn if the monkey dies
@@ -19,6 +19,11 @@ public class Monkey : MonoBehaviour
     /// Moving velocity of the monkey
     /// </summary>
     private float RunVelocity = 5;
+
+    /// <summary>
+    /// Interval to time jumps
+    /// </summary>
+    private float JumpTimer = 0;
 
     /// <summary>
     /// AudioClip for jumping
@@ -40,24 +45,31 @@ public class Monkey : MonoBehaviour
     /// </summary>
     public bool Climbing;
 
-    /// <summary>
-    /// Boolean to see if the player is on ground
-    /// </summary>
-    private bool isGrounded = false;
-
 
     // Start is called before the first frame update
     void Start()
     {
-        RigidBody = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         StartingPosition = transform.position;
         AudioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
+    void FixedUpdate()
+    {
+        ClimbCheck();
+        if (!Climbing)
+        {
+            Move();
+        }
+    }
     void Update()
     {
-        Move();
+        ClimbCheck();
+        if (Climbing)
+        {
+            Climb();
+        }
     }
 
     ///
@@ -72,17 +84,43 @@ public class Monkey : MonoBehaviour
     ///
     /// Manoeuvre the monkey, either jumping or running
     ///
+    void ClimbCheck()
+    {
+        Collider2D[] colliders = Physics2D.OverlapBoxAll(transform.position, new Vector2(.2f, 1), 0);
+
+        bool vine = false;
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.CompareTag("Vine"))
+            {
+                vine = true;
+            }
+        }
+        if(vine == true && Input.GetKey(KeyCode.G))
+        {
+            Climbing = true;
+            return;
+        }
+        Climbing = false;
+    }
+
+    void Climb()
+    {
+        rb.gravityScale = 0;
+        rb.velocity = Vector3.zero;
+        int down = Input.GetKey(KeyCode.S) == true ? 1 : 0;
+        int up = Input.GetKey(KeyCode.W) == true ? 1 : 0;
+        transform.Translate((Vector3.down * (int) down  + Vector3.up *up) * Time.deltaTime);
+    }
     void Move()
     {
+        rb.gravityScale = 1;
         bool right = Input.GetKey(KeyCode.D);
         bool left = Input.GetKey(KeyCode.A);
         bool jump = Input.GetKey(KeyCode.W);
 
         int horizontal = 0;
         int vertical = 0;
-
-        Vector2 rayOrigin = new Vector2(transform.position.x, transform.position.y - .5f);
-        isGrounded = Physics2D.Raycast(rayOrigin, Vector2.down, .2f);
 
         if (right)
         {
@@ -96,15 +134,14 @@ public class Monkey : MonoBehaviour
             transform.localScale = new Vector3(-0.3f,  0.3f,  0.3f); // facing left
         }
 
-        if (jump && isGrounded)
+        if (jump && JumpTimer < Time.time)
         {
             vertical = 25;
+            JumpTimer = Time.time + 1;
         }
 
         Vector2 movement = new Vector2(horizontal * RunVelocity, vertical * RunVelocity);
-        RigidBody.AddForce(movement);
-
-        isGrounded = false;
+        rb.AddForce(movement);
     }
 
     ///
