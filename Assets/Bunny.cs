@@ -73,6 +73,7 @@ public class Bunny : MonoBehaviour
         bool right = Input.GetKey(KeyCode.D);
         bool left = Input.GetKey(KeyCode.A);
         bool jump = Input.GetKeyDown(KeyCode.W);
+        bool superjump = Input.GetKeyDown(KeyCode.G);
 
         int horizontal = 0;
         int vertical = 0;
@@ -93,6 +94,11 @@ public class Bunny : MonoBehaviour
         }
 
         if (jump && isGrounded)
+        {
+            vertical = 10;
+        }
+
+        if(superjump && isGrounded)
         {
             vertical = 40;
         }

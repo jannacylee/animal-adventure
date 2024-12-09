@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\benau\\OneDrive\\Documents\\GitHub\\376-final\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6A0829E0-0468-DF12-61F1-6D333E02EE93}|Assembly-CSharp.csproj|c:\\users\\benau\\onedrive\\documents\\github\\376-final\\assets\\newbehaviourscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A0829E0-0468-DF12-61F1-6D333E02EE93}|Assembly-CSharp.csproj|solutionrelative:assets\\newbehaviourscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6A0829E0-0468-DF12-61F1-6D333E02EE93}|Assembly-CSharp.csproj|c:\\users\\benau\\onedrive\\documents\\github\\376-final\\assets\\scenes\\thorn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A0829E0-0468-DF12-61F1-6D333E02EE93}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\thorn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6A0829E0-0468-DF12-61F1-6D333E02EE93}|Assembly-CSharp.csproj|c:\\users\\benau\\onedrive\\documents\\github\\376-final\\assets\\thorn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\benau\\OneDrive\\Documents\\GitHub\\376-final\\Assets\\NewBehaviourScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\NewBehaviourScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A0829E0-0468-DF12-61F1-6D333E02EE93}|Assembly-CSharp.csproj|C:\\Users\\benau\\OneDrive\\Documents\\GitHub\\376-final\\assets\\thorn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A0829E0-0468-DF12-61F1-6D333E02EE93}|Assembly-CSharp.csproj|solutionrelative:assets\\thorn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -43,19 +47,30 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Thorn.cs",
+              "DocumentMoniker": "C:\\Users\\benau\\OneDrive\\Documents\\GitHub\\376-final\\Assets\\Scenes\\Thorn.cs",
+              "RelativeDocumentMoniker": "Assets\\Scenes\\Thorn.cs",
+              "ToolTip": "C:\\Users\\benau\\OneDrive\\Documents\\GitHub\\376-final\\Assets\\Scenes\\Thorn.cs",
+              "RelativeToolTip": "Assets\\Scenes\\Thorn.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T04:52:26.434Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "NewBehaviourScript.cs",
               "DocumentMoniker": "C:\\Users\\benau\\OneDrive\\Documents\\GitHub\\376-final\\Assets\\NewBehaviourScript.cs",
               "RelativeDocumentMoniker": "Assets\\NewBehaviourScript.cs",
               "ToolTip": "C:\\Users\\benau\\OneDrive\\Documents\\GitHub\\376-final\\Assets\\NewBehaviourScript.cs",
               "RelativeToolTip": "Assets\\NewBehaviourScript.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T20:57:33.566Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-08T20:57:33.566Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "MovingPlatform.cs",
               "DocumentMoniker": "C:\\Users\\benau\\OneDrive\\Documents\\GitHub\\376-final\\Assets\\MovingPlatform.cs",
               "RelativeDocumentMoniker": "Assets\\MovingPlatform.cs",
@@ -67,7 +82,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Thorn.cs",
               "DocumentMoniker": "C:\\Users\\benau\\OneDrive\\Documents\\GitHub\\376-final\\Assets\\Thorn.cs",
               "RelativeDocumentMoniker": "Assets\\Thorn.cs",
@@ -75,12 +90,11 @@
               "RelativeToolTip": "Assets\\Thorn.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T19:43:29.551Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-08T19:43:29.551Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Water.cs",
               "DocumentMoniker": "C:\\Users\\benau\\OneDrive\\Documents\\GitHub\\376-final\\Assets\\Water.cs",
               "RelativeDocumentMoniker": "Assets\\Water.cs",
@@ -92,7 +106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Monkey.cs",
               "DocumentMoniker": "C:\\Users\\benau\\OneDrive\\Documents\\GitHub\\376-final\\Assets\\Monkey.cs",
               "RelativeDocumentMoniker": "Assets\\Monkey.cs",
@@ -104,7 +118,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Turtle.cs",
               "DocumentMoniker": "C:\\Users\\benau\\OneDrive\\Documents\\GitHub\\376-final\\Assets\\Turtle.cs",
               "RelativeDocumentMoniker": "Assets\\Turtle.cs",
@@ -116,7 +130,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Bunny.cs",
               "DocumentMoniker": "C:\\Users\\benau\\OneDrive\\Documents\\GitHub\\376-final\\Assets\\Bunny.cs",
               "RelativeDocumentMoniker": "Assets\\Bunny.cs",
