@@ -1121,7 +1121,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8056142422563581633, guid: 00dc80beb1fbd4c09973e75f9f617ef9, type: 3}
       propertyPath: m_Size.x
-      value: 32.07086
+      value: 47.236298
       objectReference: {fileID: 0}
     - target: {fileID: 8056142422563581633, guid: 00dc80beb1fbd4c09973e75f9f617ef9, type: 3}
       propertyPath: m_SpriteTileMode
@@ -1137,7 +1137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8383584515336519968, guid: 00dc80beb1fbd4c09973e75f9f617ef9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.7703
+      value: 13.353
       objectReference: {fileID: 0}
     - target: {fileID: 8383584515336519968, guid: 00dc80beb1fbd4c09973e75f9f617ef9, type: 3}
       propertyPath: m_LocalPosition.y
