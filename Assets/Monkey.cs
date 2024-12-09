@@ -55,6 +55,14 @@ public class Monkey : MonoBehaviour
     }
 
     // Update is called once per frame
+    void FixedUpdate()
+    {
+        ClimbCheck();
+        if (!Climbing)
+        {
+            Move();
+        }
+    }
     void Update()
     {
         ClimbCheck();
@@ -62,7 +70,6 @@ public class Monkey : MonoBehaviour
         {
             Climb();
         }
-        else Move();
     }
 
     ///
