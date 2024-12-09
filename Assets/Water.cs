@@ -7,17 +7,17 @@ public class Water : MonoBehaviour
     /// <summary>
     /// AudioClip for entering water
     /// </summary>
-    public AudioClip SPLASH;
-
     /// <summary>
     /// AudioSource for water
     /// </summary>
-    public AudioSource AudioSource;
+    public AudioSource audioSource;
+    private float splashCd = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        AudioSource = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -38,7 +38,11 @@ public class Water : MonoBehaviour
             if (!turt.Swimming)
             {
                 turt.Swim(true);
-                AudioSource.PlayOneShot(SPLASH);
+                if (splashCd < Time.time)
+                {
+                    audioSource.Play();
+                    splashCd = Time.time + 1f;
+                }
             }
         }
     }

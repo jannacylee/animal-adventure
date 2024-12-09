@@ -23,7 +23,6 @@ public class Bunny : MonoBehaviour
     /// <summary>
     /// AudioClip for jumping
     /// </summary>
-    public AudioClip JumpAudio;
 
     /// <summary>
     /// AudioClip for dying
@@ -101,6 +100,8 @@ public class Bunny : MonoBehaviour
         if(superjump && isGrounded)
         {
             vertical = 40;
+            AudioSource.Play();
+
         }
 
         Vector2 movement = new Vector2(horizontal * RunVelocity, vertical * RunVelocity);
